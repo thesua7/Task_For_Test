@@ -47,9 +47,8 @@ dct3 = json.loads(json_str3)
 
 combined_dct = merge_dict(dct1,dct2, dct3)
 
-allData = json.dumps(combined_dct)
 
-finalData = allData
+
 
 for i in combined_dct['objects']:
     if i['classTitle'].__eq__("Vehicle"):
@@ -63,7 +62,7 @@ for i in combined_dct['objects']:
 print(combined_dct)
 
 fileSavePlace = "\json_files"
-pathForSave = os.getcwd()+fileSavePlace
+
 with open("json_files/single_json.json","w") as outfile:
     json.dump(combined_dct, outfile)
 

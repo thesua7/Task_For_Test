@@ -90,7 +90,7 @@ def generateJsonFromFile(nameofDataset,pathTemp):
 
         print(MainData)
         fileSavePlace = "\json_files"
-        # pathForSave = os.getcwd()+fileSavePlace
+    
         with open("json_files/test_formatted_"+nameofDataset, "w") as outfile:
             json.dump(MainData, outfile)
 
